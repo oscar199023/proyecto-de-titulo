@@ -51,11 +51,7 @@ route::group(['middelware' => 'auth'], function(){
     Route::get('/pedidos/lista', [PedidoController::class, 'lista']);
     Route::resource('/pedidos', PedidoController::class);
 
-    //rutas de vistas de alimentos
-    Route::get('/home/bebida', [ProductoController::class, 'bebida']);
-    Route::get('/home/alcohol', [ProductoController::class, 'alcohol']);
-    Route::get('/home/ensalada', [ProductoController::class, 'ensalada']);
-    Route::get('/home/postre', [ProductoController::class, 'postre']);
+   
 
 });
 

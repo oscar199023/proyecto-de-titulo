@@ -36,7 +36,7 @@
         @foreach( $productos as $producto)
         <tr>
             
-        @if($producto->categoria == 3)
+       
 
             <td>
                 <img class="img-thumbnail img-fluid" src="{{ asset('storage').'/'.$producto->imagen }}" width="100" height="50" alt="">
@@ -58,7 +58,7 @@
                     <input class="btn btn-danger" type="submit" onclick="return confirm(' ¿Quieres borrar?')" value="Borrar">
                 </form>
             </td>
-        @endif
+       
         </tr>
         @endforeach
     </tbody>

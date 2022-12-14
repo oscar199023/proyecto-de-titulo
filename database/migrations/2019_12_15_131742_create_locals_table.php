@@ -14,13 +14,12 @@ class CreateLocalsTable extends Migration
     public function up()
     {
         Schema::create('locals', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('nombre');
             $table->string('razon_social');
             $table->string('direccion');
             $table->string('telefono');
             $table->string('correo');
-            $table->timestamps();
         });
     }
 

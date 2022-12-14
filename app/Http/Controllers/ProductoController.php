@@ -31,11 +31,23 @@ class ProductoController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function lista()
+    public function lista(Request $request)
     {
-        $datos['productos']=producto::orderBy('id', 'DESC')->paginate('100');
+        $key = $request->key;
+        $datos['productos'] = null;
+        if($key){
+            
+            $datos['productos']=producto::select('*')->where('categoria', '=',  $key )->orderBy('id', 'DESC')->paginate('100');
+        }
+        else{
+            $datos['productos']=producto::select('*')->orderBy('id', 'DESC')->paginate('100');
+        }
+        
         return view('producto.administrador', $datos);
+        
     }
+
+   
 
 
     public function create()
@@ -181,28 +193,5 @@ class ProductoController extends Controller
 
         
         return redirect('/home')->with('mensaje','Producto Borrado con exito ');
-    }
-    public function bebida()
-    {
-        $datos['productos']=producto::orderBy('id', 'DESC')->paginate('100');
-        return view('producto.bebida', $datos);
-    }
-
-    public function alcohol()
-    {
-        $datos['productos']=producto::orderBy('id', 'DESC')->paginate('100');
-        return view('producto.alcohol', $datos);
-    }
-    
-    public function ensalada()
-    {
-        $datos['productos']=producto::orderBy('id', 'DESC')->paginate('100');
-        return view('producto.ensalada', $datos);
-    }
-
-    public function postre()
-    {
-        $datos['productos']=producto::orderBy('id', 'DESC')->paginate('100');
-        return view('producto.postre', $datos);
     }
 }

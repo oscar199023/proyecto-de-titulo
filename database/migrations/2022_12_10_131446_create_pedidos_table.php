@@ -14,13 +14,12 @@ class CreatePedidosTable extends Migration
     public function up()
     {
         Schema::create('pedidos', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->integer('iva');
             $table->string('imagen');
             $table->integer('propina');
             $table->integer('subTotal');
             $table->integer('total');
-            $table->timestamps();
         });
     }
 

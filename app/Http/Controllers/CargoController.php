@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\garzon;
+use App\Models\cargo;
 use Illuminate\Http\Request;
 
-class GarzonController extends Controller
+class CargoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class GarzonController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\garzon  $garzon
+     * @param  \App\Models\cargo  $cargo
      * @return \Illuminate\Http\Response
      */
-    public function show(garzon $garzon)
+    public function show(cargo $cargo)
     {
         //
     }
@@ -52,10 +52,10 @@ class GarzonController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\garzon  $garzon
+     * @param  \App\Models\cargo  $cargo
      * @return \Illuminate\Http\Response
      */
-    public function edit(garzon $garzon)
+    public function edit(cargo $cargo)
     {
         //
     }
@@ -64,10 +64,10 @@ class GarzonController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\garzon  $garzon
+     * @param  \App\Models\cargo  $cargo
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, garzon $garzon)
+    public function update(Request $request, cargo $cargo)
     {
         //
     }
@@ -75,10 +75,10 @@ class GarzonController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\garzon  $garzon
+     * @param  \App\Models\cargo  $cargo
      * @return \Illuminate\Http\Response
      */
-    public function destroy(garzon $garzon)
+    public function destroy(cargo $cargo)
     {
         //
     }

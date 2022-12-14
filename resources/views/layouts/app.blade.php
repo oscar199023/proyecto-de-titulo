@@ -32,18 +32,18 @@
 
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                    <a class="nav-link " aria-current="page" href="{{ url('/home') }}">Plato de Fondo</a>
+                    <a class="nav-link " aria-current="page" href="{{ url('/home?key=3') }}">Plato de Fondo</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/home/bebida') }}">Bebidas</a>
+                    <a class="nav-link" href="{{ url('/home?key=1') }}">Bebidas</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/home/alcohol') }}">Bebidas alcholicas</a>
+                    <a class="nav-link" href="{{ url('/home?key=2') }}">Bebidas alcholicas</a>
                     </li><li class="nav-item">
-                    <a class="nav-link" href="{{ url('/home/ensalada') }}">Ensaldas</a>
+                    <a class="nav-link" href="{{ url('/home?key=4') }}">Ensaldas</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/home/postre') }}">Postres</a>
+                    <a class="nav-link" href="{{ url('/home?key=5') }}">Postres</a>
                 </ul>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
